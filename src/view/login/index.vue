@@ -3,8 +3,8 @@
     <div
       class="login-box text-white text-center p-12 flex flex-col items-center"
     >
-      <div class="text-xl mb-12 ">欢迎回来</div>
-      <div class="flex items-center mb-8 w-full" >
+      <div class="text-xl mb-12">欢迎回来</div>
+      <div class="flex items-center mb-8 w-full">
         <label for="" class="flex-none mr-2 text-sm">账号:</label>
         <el-input v-model="acc" />
       </div>
@@ -13,20 +13,46 @@
         <el-input v-model="pwd" type="password" show-password />
       </div>
       <div class="mt-9 w-full">
-        <el-button type="primary" class="w-full"> 登 录 </el-button>
+        <el-button
+          type="primary"
+          :loading="loading"
+          class="w-full"
+          @click="login"
+        >
+          登 录
+        </el-button>
       </div>
     </div>
+    
   </div>
 </template>
 
 
-<script  setup>
-import { ref } from "vue";
+<script  setup >
+import { ref, unref } from "vue";
 import { ElInput, ElButton } from "element-plus";
-import postHttp from '@/utils/http'
+import {useRouter} from 'vue-router'
+import postHttp from "@/utils/http";
+
+const loading = ref(false);
+
 const pwd = ref("");
 const acc = ref("");
-postHttp('api')
+const router = useRouter();
+const login = async () => {
+  loading.value = true;
+  try {
+    const res = await postHttp("/", { acc: acc.value, pwd: pwd.value });
+    console.log(res.message ==="success",'res.message ==="success"')
+    if(res.message ==="success"){
+         router.push('/home')
+    }
+    console.log(res);
+  } catch (error) {
+  } finally {
+    loading.value = false;
+  }
+};
 </script>  
 
 

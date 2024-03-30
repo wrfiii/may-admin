@@ -31,7 +31,7 @@
 <script setup>
 import { ElIcon } from "element-plus";
 import { HomeFilled, Close, Histogram, Edit } from "@element-plus/icons-vue";
-import { ref, unref } from "vue";
+import { ref, unref, watch } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
 const route = useRoute();
@@ -39,7 +39,12 @@ const route = useRoute();
 
 const index = ref(route.name);
 
+
 const router = useRouter();
+watch(route,()=>{
+  index.value = route.name;
+})
+
 const goPage = (path) => {
   index.value = path;
   router.push(path);

@@ -7,3 +7,15 @@ export default (url, data) => {
         data
     })
 }
+
+export function uploadImag(formData) {
+    return serviceAxios({
+        method: 'POST',
+        data: formData,
+        url: '/upload',
+        headers: {
+            'Content-Type': 'multipart/form-data'
+        },
+    })
+}
+

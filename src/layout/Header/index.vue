@@ -14,7 +14,7 @@
           alt=""
         />
       </div>
-      <div>mayjs</div>
+      <a href="https://mayjs.com/" target="_blank"> <div class=" text-lg flex items-center">mayjs <span class=" text-2xl"><el-icon><Position /></el-icon></span></div></a>
       <div class=" ml-6">
         <el-button type="danger"  :icon="Close" circle  />
       </div>
@@ -27,7 +27,7 @@
 import { ElInput, ElButton } from "element-plus";
 
 import { ElIcon } from "element-plus";
-import { Message ,Close} from "@element-plus/icons-vue";
+import { Message ,Close,Position} from "@element-plus/icons-vue";
 </script>
 
 

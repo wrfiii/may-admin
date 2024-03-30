@@ -43,11 +43,9 @@ const login = async () => {
   loading.value = true;
   try {
     const res = await postHttp("/", { acc: acc.value, pwd: pwd.value });
-    console.log(res.message ==="success",'res.message ==="success"')
     if(res.message ==="success"){
          router.push('/home')
     }
-    console.log(res);
   } catch (error) {
   } finally {
     loading.value = false;

@@ -1,0 +1,86 @@
+.banner {
+  background: #ffffff;
+  overflow: hidden;
+  margin-top: 24rpx;
+  position: relative;
+}
+
+.banner-bg {
+  height: 280rpx;
+  background: radial-gradient(120% 80% at 0% 0%, #ffd6e6 0%, #ffc0d9 50%, #ffb3cc 100%);
+}
+
+.banner-content {
+  padding: 28rpx;
+}
+
+.banner-title {
+  display: block;
+  font-size: 30rpx;
+  color: #8a3a59;
+  font-weight: 600;
+}
+
+.banner-sub {
+  display: block;
+  margin-top: 8rpx;
+  font-size: 24rpx;
+  color: #a64b70;
+}
+
+.banner-actions {
+  margin-top: 16rpx;
+  display: flex;
+  gap: 16rpx;
+}
+
+.banner-btn {
+  padding: 12rpx 22rpx;
+  font-size: 24rpx;
+}
+
+.banner-chip {
+  padding: 12rpx 22rpx;
+  background: #ffe3ee;
+  color: #8a3a59;
+  font-size: 24rpx;
+}
+
+.grid {
+  margin-top: 28rpx;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 24rpx;
+}
+
+.grid-item {
+  background: #ffffff;
+  padding: 28rpx;
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+}
+
+.icon-box {
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 12rpx;
+  background: linear-gradient(135deg, #fff0f6, #ffe3ee);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
+}
+
+.grid-texts { display: flex; flex-direction: column; gap: 8rpx; }
+.grid-title { font-weight: 600; color: #5c2a3b; }
+.grid-desc { font-size: 24rpx; color: #a64b70; }
+
+.photo-placeholder {
+  margin: 36rpx 0 120rpx 0;
+  width: 100%;
+  height: 260rpx;
+  border-radius: 24rpx;
+  background: linear-gradient(180deg, #ffe3ee 0%, #ffd6e6 100%);
+}
+

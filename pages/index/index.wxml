@@ -1,0 +1,47 @@
+<view class="safe-pad">
+  <!-- Top header area with custom title and icons -->
+  <view class="header" style="display:flex;align-items:center;justify-content:space-between;padding:12rpx 8rpx;">
+    <text style="font-weight:600;font-size:36rpx;color:#8a3a59;">Wake Me容颜管理中心</text>
+    <view style="display:flex;gap:24rpx;">
+      <view class="icon-dot" style="width:12rpx;height:12rpx;background:#8a3a59;border-radius:9999rpx;"></view>
+      <view class="icon-circle" style="width:36rpx;height:36rpx;border:6rpx solid #8a3a59;border-radius:9999rpx;"></view>
+    </view>
+  </view>
+
+  <!-- Banner card -->
+  <view class="shadow-card rounded banner">
+    <view class="banner-bg"></view>
+    <view class="banner-content">
+      <text class="banner-title">氧气嫩肤·沉浸式体验</text>
+      <text class="banner-sub">光曜晶彩 · 钻光弹</text>
+      <view class="banner-actions">
+        <view class="btn-pink rounded banner-btn">官方授权门店</view>
+        <view class="rounded banner-chip">轻奢抗衰管理</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- Grid buttons -->
+  <view class="grid">
+    <block wx:for="{{gridItems}}" wx:key="id">
+      <view class="shadow-card rounded grid-item" bindtap="onGridTap" data-id="{{item.id}}">
+        <view class="icon-box">{{item.emoji}}</view>
+        <view class="grid-texts">
+          <text class="grid-title">{{item.title}}</text>
+          <text class="grid-desc">{{item.desc}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <!-- Bottom image placeholder -->
+  <view class="photo-placeholder" />
+
+  <!-- Tab-like footer placeholder -->
+  <view style="position:fixed;left:0;right:0;bottom:0;background:#f6c1d3;padding:14rpx 24rpx;display:flex;justify-content:space-around;">
+    <text style="color:#6c2c44;">首页</text>
+    <text style="color:#6c2c44;opacity:.7;">预约</text>
+    <text style="color:#6c2c44;opacity:.7;">我的</text>
+  </view>
+</view>
+

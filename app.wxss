@@ -1,0 +1,26 @@
+/* Global pink theme */
+page {
+  background: #fdeef4;
+}
+
+.text-subtle {
+  color: #a64b70;
+}
+
+.shadow-card {
+  box-shadow: 0 8rpx 24rpx rgba(166, 75, 112, 0.15);
+}
+
+.rounded {
+  border-radius: 24rpx;
+}
+
+.btn-pink {
+  background: linear-gradient(135deg, #ffb3cc 0%, #ff8fb3 100%);
+  color: #ffffff;
+}
+
+.safe-pad {
+  padding: 24rpx 28rpx 40rpx;
+}
+
